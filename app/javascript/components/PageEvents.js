@@ -14,15 +14,19 @@ class PageEvents extends React.Component {
       this.setState({ searchTerm: event.target.value });
       console.log(event.target.value);
     };
+
+    const searchedEvents = this.props.items.filter((item) => 
+          item.title.toLowerCase().includes(this.state.searchTerm.toLowerCase())
+    ); 
   
     return (
       <React.Fragment>
-        <h1>{this.props.title}</h1>
+        <h1>{ this.props.title }</h1>
         <Search onSearch={ handleChange } />
         <p>
             Search for <strong>{ this.state.searchTerm }</strong>
         </p>
-        <Events items={ this.props.items } />
+        <Events items={ searchedEvents } />
       </React.Fragment>
     );
   }
