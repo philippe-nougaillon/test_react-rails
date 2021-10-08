@@ -7,7 +7,11 @@ class Search extends React.Component {
       <React.Fragment>
         <div>
           <label htmlFor="search">Search:</label>
-          <input is="search" type="text" onChange={ this.props.onSearch } />
+          <input  id="search" 
+                  type="text" 
+                  value={ this.props.search }
+                  onChange={ this.props.onSearch }
+          />
         </div>
       </React.Fragment>
     );
