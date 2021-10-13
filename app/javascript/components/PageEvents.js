@@ -22,11 +22,17 @@ class PageEvents extends React.Component {
     return (
       <React.Fragment>
         <h1>{ this.props.title }</h1>
-        <Search search={ this.state.searchTerm } onSearch={ handleChange } />
+
+        <Search search={ this.state.searchTerm } onSearch={ handleChange }>
+          Rechercher:
+        </Search>
+
         <p>
           Search for <strong>{ this.state.searchTerm }</strong>
         </p>
+
         <Events items={ searchedEvents } />
+
       </React.Fragment>
     );
   }

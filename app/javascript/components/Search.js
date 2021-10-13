@@ -6,7 +6,9 @@ class Search extends React.Component {
     return (
       <React.Fragment>
         <div>
-          <label  htmlFor="search">Search:</label>
+          <label  htmlFor="search">
+            { this.props.children }
+          </label>
           <input  id="search" 
                   type="text" 
                   value={ this.props.search }
