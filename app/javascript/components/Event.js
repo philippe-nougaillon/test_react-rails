@@ -6,9 +6,7 @@ class Event extends React.Component {
     return (
       <React.Fragment>
         <li>
-          { this.props.item.date }
-          :
-          { this.props.item.title }
+          { `${ this.props.item.date } : ${ this.props.item.title }` } 
         </li>
       </React.Fragment>
     );

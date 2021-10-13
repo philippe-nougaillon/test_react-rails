@@ -24,7 +24,7 @@ class PageEvents extends React.Component {
         <h1>{ this.props.title }</h1>
 
         <Search search={ this.state.searchTerm } onSearch={ handleChange }>
-          Rechercher:
+          Rechercher :
         </Search>
 
         <p>

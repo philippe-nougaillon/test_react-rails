@@ -5,16 +5,15 @@ class Search extends React.Component {
   render () {
     return (
       <React.Fragment>
-        <div>
-          <label  htmlFor="search">
-            { this.props.children }
-          </label>
-          <input  id="search" 
-                  type="text" 
-                  value={ this.props.search }
-                  onChange={ this.props.onSearch }
-          />
-        </div>
+        <label  htmlFor="search">
+          { this.props.children }
+        </label>
+        <input  id="search" 
+                type="text" 
+                autoFocus="true"
+                value={ this.props.search }
+                onChange={ this.props.onSearch }
+        />
       </React.Fragment>
     );
   }
