@@ -4,15 +4,19 @@ import Event from "../components/Event"
 
 class Events extends React.Component {
   render () {
+    const List = ({ list }) => (
+      <ul>
+        { list.map((item) => (
+            <Event key={ item.id } item={ item } />
+          ))
+        }
+      </ul>
+    );
+
     return (
       <React.Fragment>
-        Items: {this.props.items.length}
-        <ul>
-          { this.props.items.map((item) => (
-              <Event key={item.id} item={item} />
-            )
-          )}
-        </ul>
+        Items: { this.props.items.length }
+        <List list={ this.props.items } />
       </React.Fragment>
     );
   }
