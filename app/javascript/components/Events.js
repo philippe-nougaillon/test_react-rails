@@ -8,9 +8,10 @@ class Events extends React.Component {
       <React.Fragment>
         Items: {this.props.items.length}
         <ul>
-          {this.props.items.map((item) => (
-            <Event key={item.id} item={item} />
-          ))}
+          { this.props.items.map((item) => (
+              <Event key={item.id} item={item} />
+            )
+          )}
         </ul>
       </React.Fragment>
     );
@@ -20,4 +21,5 @@ class Events extends React.Component {
 Events.propTypes = {
   items: PropTypes.array
 };
+
 export default Events

@@ -6,7 +6,7 @@ class Search extends React.Component {
     return (
       <React.Fragment>
         <div>
-          <label htmlFor="search">Search:</label>
+          <label  htmlFor="search">Search:</label>
           <input  id="search" 
                   type="text" 
                   value={ this.props.search }
@@ -17,5 +17,10 @@ class Search extends React.Component {
     );
   }
 }
+
+Search.propTypes = {
+  search: PropTypes.string,
+  onSearch: PropTypes.func
+};
 
 export default Search
