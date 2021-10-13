@@ -3,16 +3,16 @@ import PropTypes from "prop-types"
 
 class Search extends React.Component {
   render () {
+    const { search, onSearch, children } = this.props;
+
     return (
       <React.Fragment>
-        <label  htmlFor="search">
-          { this.props.children }
-        </label>
+        <label htmlFor="search">{ children }</label>
         <input  id="search" 
                 type="text" 
                 autoFocus="true"
-                value={ this.props.search }
-                onChange={ this.props.onSearch }
+                value={ search }
+                onChange={ onSearch }
         />
       </React.Fragment>
     );
